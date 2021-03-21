@@ -1,0 +1,18 @@
+def printArr(arr):
+    for i in arr:
+        print(str(i), end='')
+    print('')
+
+def recursive_function(length, arr, i):
+    if i == length:
+        print(arr)
+        return
+    arr[i] = 0
+    recursive_function(length,arr,i+1)
+    arr[i] = 1
+    recursive_function(length,arr,i+1)
+
+i = 4
+a = [None]*i
+
+recursive_function(i, a, 0)
